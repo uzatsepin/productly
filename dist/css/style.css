@@ -1,0 +1,306 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+h1 {
+  font-size: 4.4 rem;
+  line-height: 5.4rem;
+  font-weight: bold;
+  font-style: normal;
+}
+
+h2 {
+  font-size: 3.4rem;
+  line-height: 4.6rem;
+  font-weight: bold;
+  font-style: normal;
+}
+
+h3 {
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+  font-weight: bold;
+  font-style: normal;
+}
+
+h4 {
+  font-size: 2.2rem;
+  line-height: 3rem;
+  font-weight: 600;
+  font-style: normal;
+}
+
+h5 {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.container {
+  max-width: 1197px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.title {
+  color: #2F281E;
+}
+
+.banner__link,
+.banner__btn,
+.user-nav__link,
+.menu__list-link {
+  transition: all 0.3s ease-out;
+}
+
+.user-nav__link,
+body {
+  font-family: "Open Sans", Verdana, sans-serif;
+}
+
+.banner__link,
+.menu__list-link,
+h1 {
+  font-family: "Poppins", Verdana, sans-serif;
+}
+
+.banner__btn:hover {
+  background-color: #FF7549;
+}
+
+.header {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.header__inner {
+  height: 78px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__list {
+  display: flex;
+  gap: 24px;
+}
+
+.menu__list-link {
+  color: #2F281E;
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.menu__list-link:hover {
+  color: #FF9900;
+}
+
+.user-nav {
+  margin: 0 13px 0 52px;
+}
+
+.user-nav__link {
+  color: #173A56;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+  font-style: normal;
+  padding: 11px 23px;
+  border: 1px solid #BCD0E5;
+  border-radius: 4px;
+}
+
+.user-nav__link:hover {
+  background-color: #BCD0E5;
+}
+
+.user-nav__link + .user-nav__link {
+  margin-left: 14px;
+  border-color: transparent;
+  background-color: #FF9900;
+  color: #ffffff;
+}
+
+.user-nav__link + .user-nav__link:hover {
+  background-color: #FF7549;
+}
+
+.banner__inner {
+  padding: 133px 0 80px;
+  background-image: url("../img/backgrounds/top-bg.svg");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.banner__title {
+  font-size: 44px;
+  line-height: 54px;
+  font-weight: 700;
+  font-style: normal;
+  margin-bottom: 30px;
+  max-width: 460px;
+}
+
+.banner__text {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  font-style: normal;
+  color: #544837;
+  margin-bottom: 45px;
+  max-width: 455px;
+}
+
+.banner__btn {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  font-style: normal;
+  color: #ffffff;
+  border-radius: 4px;
+  background-color: #FF9900;
+  padding: 15px 41px 14px;
+  margin-right: 30px;
+}
+
+.banner__link {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  font-style: normal;
+  display: inline-block;
+  color: #FF9900;
+  padding-left: 25px;
+  position: relative;
+}
+
+.banner__link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 17px;
+  height: 19px;
+  background-image: url("../img/icons/play-icon.svg");
+}
+
+.banner__link:hover {
+  color: #FF7549;
+}
+
+@media (max-width: 1197px) {
+  h1 {
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+    line-height: 3.3rem;
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  h3 {
+    font-size: 2.1rem;
+    line-height: 3.1rem;
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  h4 {
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: bold;
+    font-style: normal;
+  }
+}
