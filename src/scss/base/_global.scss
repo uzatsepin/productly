@@ -1,0 +1,44 @@
+.container {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.title {
+  color: $color-heading;
+  @extend %font-primary;
+  @include font(34px, 46px, 700);
+}
+
+.tag {
+  @include font(13px, 28px, 400);
+  color: $color-text;
+  cursor: pointer;
+  margin-right: 7px;
+  border-radius: 90px;
+  margin-right: 7px;
+}
+
+.tag--bordered {
+  padding: 2px 14px;
+  border-radius: 90px;
+  border: 1px solid $color-border;
+}
+
+.tag--selected {
+  padding: 3px 15px;
+  background-color: $color-primary;
+  color: $color-light;
+}
+
+.tag--filled {
+  margin-right: 7px;
+  padding: 3px 15px;
+  background-color: $color-tag;
+  color: $color-text;
+  cursor: pointer;
+}
+
+.block-shadowed {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}

@@ -1,0 +1,53 @@
+.banner__inner {
+  padding: 133px 0 80px;
+  background-image: url("../img/backgrounds/top-bg.svg");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.banner__title {
+  @include font(44px, 54px, 700);
+  margin-bottom: 30px;
+  max-width: 460px;
+}
+
+.banner__text {
+  @include font(18px, 28px, 400);
+  color: $color-text;
+  margin-bottom: 45px;
+  max-width: 455px;
+}
+
+.banner__btn {
+  display: inline-block;
+  @include font(16px, 22px, 700);
+  color: $color-light;
+  border-radius: 4px;
+  background-color: $color-primary;
+  padding: 15px 41px 14px;
+  margin-right: 30px;
+  @extend %transition;
+  @extend %hover-additional;
+}
+
+.banner__link {
+  @include font(16px, 24px, 600);
+  @extend %font-additional;
+  display: inline-block;
+  color: $color-primary;
+  padding-left: 25px;
+  position: relative;
+  @extend %transition;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 17px;
+    height: 19px;
+    background-image: url("../img/icons/play-icon.svg");
+  }
+  &:hover {
+    color: $color-additional;
+  }
+}

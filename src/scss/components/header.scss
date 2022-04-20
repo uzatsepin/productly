@@ -1,0 +1,51 @@
+.header {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+}
+.header__inner {
+  height: 78px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__list {
+  display: flex;
+  gap: 24px;
+}
+
+.menu__list-link {
+  color: $color-heading;
+  @include font(14px, 28px, 400);
+  @extend %font-additional;
+  @extend %transition;
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.user-nav {
+  margin: 0 13px 0 52px;
+}
+
+.user-nav__link {
+  @extend %font-primary;
+  color: $color-hamburger;
+  @include font(16px, 22px, 600);
+  padding: 11px 23px;
+  border: 1px solid $color-hovered;
+  border-radius: 4px;
+  @extend %transition;
+  &:hover {
+    background-color: $color-hovered;
+  }
+}
+
+.user-nav__link + .user-nav__link {
+  margin-left: 14px;
+  border-color: transparent;
+  background-color: $color-primary;
+  color: $color-light;
+  &:hover {
+    background-color: $color-additional;
+  }
+}

@@ -1,0 +1,42 @@
+.strategies {
+  margin-top: 30px;
+}
+
+.strategies__descr {
+  margin-top: 14px;
+  @extend %text;
+}
+
+.strategies__tags {
+  margin-top: 24px;
+}
+
+.strategy {
+  max-width: 377px;
+  margin-top: 30px;
+  border-radius: 8px;
+}
+
+.strategy__title {
+  @include font(24px, 34px, 700);
+  color: $color-heading;
+  padding: 24px 34px 29px 33px;
+  @extend %transition;
+  cursor: pointer;
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.strategy__tags {
+  padding: 0 0 26px 33px;
+}
+
+.strategy__wrapper {
+  @include columns($width: 30%)
+}
+
+
+.strategy-wide {
+  max-width: 787px;
+}

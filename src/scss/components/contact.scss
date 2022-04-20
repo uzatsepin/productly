@@ -1,0 +1,83 @@
+.contact {
+  margin-top: 100px;
+  background-color: $color-background;
+}
+
+.contact__title {
+  padding-top: 62px;
+}
+
+.contact__wrapper {
+  @include columns($width: 50%);
+  flex-wrap: nowrap;
+  padding-bottom: 90px;
+}
+
+.contact__info {
+  margin-right: 90px;
+}
+
+.contact__text {
+  margin-top: 17px;
+  @include font(16px, 26px, 400);
+  color: $color-text;
+  max-width: 528px;
+}
+
+.contact__details {
+  margin-top: 60px;
+}
+
+.contact__phone, .contact__mail {
+  display: flex;
+  align-items: center;
+}
+
+.contact__img {
+  margin-right: 11px;
+}
+
+.contact__link {
+  color: $color-text;
+  @include font(25px, 26px, 400);
+
+}
+
+.contact__mail {
+  margin-top: 20px;
+}
+
+input[type=text], input[type=email] {
+  min-width: 278px;
+  padding: 10px 22px;
+  border-radius: 5px;
+  @include font(16px, 26px, 400);
+  color: $color-placeholder;
+}
+
+input[type=text] {
+  margin-right: 16px;
+}
+
+.contact__form-textarea {
+  margin-top: 18px;
+  padding: 9px 21px;
+  border-radius: 5px;
+  min-height: 159px;
+  min-width: 577px;
+  resize: none;
+  @include font(16px, 26px, 400);
+  color: $color-placeholder;
+}
+
+.contact__form-btn {
+  margin-top: 20px;
+  display: block;
+  background-color: $color-primary;
+  padding: 15px 39px;
+  border-radius: 4px;
+  @include font(16px, 22px, 700);
+  color: $color-light;
+  @extend %transition;
+  @extend %hover-additional;
+}

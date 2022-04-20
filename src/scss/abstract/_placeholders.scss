@@ -1,0 +1,23 @@
+%transition {
+  transition: all .3s ease-out;
+}
+
+%font-primary {
+  font-family: 'Open Sans', Verdana, sans-serif;
+}
+
+%font-additional {
+  font-family: 'Poppins', Verdana, sans-serif;
+}
+
+%hover-additional {
+  &:hover {
+    background-color: $color-additional;
+  }
+}
+
+
+%text {
+  @include font(16px, 26px, 400);
+  color: $color-text;
+}

@@ -1,0 +1,19 @@
+@import "./base/normalize";
+@import "./abstract/mixins";
+@import "./base/variables";
+@import "./base/base";
+@import "./base/global";
+@import "./abstract/placeholders";
+
+
+//Components
+@import "components/header";
+@import "components/banner";
+@import "components/tools";
+@import "components/strategies";
+@import "components/about";
+@import "components/contact";
+@import "components/footer";
+
+@import "./base/modal";
+@import "./base/hamburger";

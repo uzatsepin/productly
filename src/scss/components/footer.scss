@@ -1,0 +1,23 @@
+.footer {
+  padding: 58px 0 52px;
+}
+
+.footer__inner {
+  @include columns($width: 25%);
+}
+
+.footer-menu__title {
+  color: $color-heading;
+  @include font(20px, 30px, 600);
+  margin-bottom: 15px;
+}
+
+.footer-link {
+  color: $color-text;
+  @include font(16, 35px, 400);
+  @extend %font-additional;
+  @extend %transition;
+  &:hover {
+    color: $color-primary;
+  }
+}
