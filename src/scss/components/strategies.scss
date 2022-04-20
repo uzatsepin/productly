@@ -1,5 +1,8 @@
 .strategies {
   margin-top: 30px;
+  @include media-tablet {
+    text-align: center;
+  }
 }
 
 .strategies__descr {
@@ -9,12 +12,21 @@
 
 .strategies__tags {
   margin-top: 24px;
+  @include media-tablet {
+    justify-content: center;
+  }
 }
 
 .strategy {
   max-width: 377px;
   margin-top: 30px;
   border-radius: 8px;
+  @include media-tablet {
+    flex-basis: 48%;
+    overflow: hidden;
+  }
+  @include media-mobile {}
+  flex-basis: 100%;
 }
 
 .strategy__title {
