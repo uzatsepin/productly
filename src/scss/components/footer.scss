@@ -21,3 +21,23 @@
     color: $color-primary;
   }
 }
+
+@media (max-width: 1198px) {
+  .footer__inner >* {
+    flex-basis: unset;
+  }
+  .footer__inner .logo {
+    width: 100%;
+    margin-bottom: 35px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer__inner {
+    flex-direction: column;
+  }
+  .quick-menu, .legal-menu {
+    margin-bottom: 18px;
+  }
+}

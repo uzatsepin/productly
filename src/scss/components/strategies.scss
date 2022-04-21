@@ -42,6 +42,9 @@
 
 .strategy__tags {
   padding: 0 0 26px 33px;
+  @include media-tablet {
+    padding: 0 0 26px 0;
+  }
 }
 
 .strategy__wrapper {
@@ -51,4 +54,20 @@
 
 .strategy-wide {
   max-width: 787px;
+}
+
+@media (max-width: 1170px) {
+  .strategy__wrapper {
+    justify-content: space-around;
+
+  }
+  .strategy {
+    overflow: initial;
+  }
+}
+
+@media (max-width: 500px) {
+  .strategy__title {
+    font-size: 21px;
+  }
 }

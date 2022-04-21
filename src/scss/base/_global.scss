@@ -8,6 +8,9 @@
   color: $color-heading;
   @extend %font-primary;
   @include font(34px, 46px, 700);
+  @include media-mobile {
+    @include font(24px, 33px, 700);
+  }
 }
 
 .tag {

@@ -1,21 +1,45 @@
 .banner__inner {
   padding: 133px 0 80px;
-  background-image: url("../img/backgrounds/top-bg.svg");
-  background-repeat: no-repeat;
-  background-position: bottom right;
+  //@include columns($width: 50%);
+  display: flex;
+  justify-content: space-between;
+  @include  media-tablet {
+    padding: 50px 0 60px;
+  }
+}
+
+.banner__img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.banner__info {
+  flex-shrink: 0;
+  @include media-tablet {
+    max-width: 389px;
+  }
 }
 
 .banner__title {
   @include font(44px, 54px, 700);
+  @extend %font-additional;
   margin-bottom: 30px;
   max-width: 460px;
+  @include media-mobile {
+    @include font(32px, 42px, 700);
+  }
 }
 
 .banner__text {
   @include font(18px, 28px, 400);
+  @extend %font-additional;
   color: $color-text;
   margin-bottom: 45px;
   max-width: 455px;
+  @include media-mobile {
+    @include font(15px, 24px, 400);
+  }
 }
 
 .banner__btn {
@@ -50,4 +74,25 @@
   &:hover {
     color: $color-additional;
   }
+}
+
+@media (max-width: 600px) {
+  .banner__inner {
+    flex-direction: column-reverse;
+  }
+  .banner__info {
+    margin-top: 16px;
+    max-width: 100%;
+    text-align: center;
+  }
+  .banner__title, .banner__text {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 390px) {
+.banner__link {
+  margin-right: 30px;
+  margin-top: 25px;
+}
 }

@@ -3,9 +3,7 @@
 
 import {strategiesItems} from "./strategies-items.js";
 
-
 const strategyWrapper = document.querySelector('.strategy__wrapper');
-
 
 strategiesItems.forEach(elem => {
     const {title, urlToImage, tags} = elem;
@@ -22,3 +20,24 @@ strategiesItems.forEach(elem => {
     `
     strategyWrapper.appendChild(strategy);
 });
+
+// const addTagsClickHandler = () => {
+//     document.querySelector('.strategies__tags').addEventListener('click', (e) => {
+//         if(e.target.classList.includes('tag')) {
+//             let clicked = e.target;
+//             removeSelectedTags();
+//         }
+//     })
+// }
+//
+// const removeSelectedTags = () => {
+//     let tags = document.querySelectorAll('.strategies__tags .tag');
+//     tags.forEach(tag => {
+//         tag.classList.remove('tag--selected');
+//         tag.classList.add('tag--bordered');
+//     })
+// }
+//
+// window.onload = function () {
+//     addTagsClickHandler();
+// }

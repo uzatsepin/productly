@@ -11,6 +11,9 @@
   @include columns($width: 50%);
   flex-wrap: nowrap;
   padding-bottom: 90px;
+  @include media-tablet {
+    text-align: center;
+  }
 }
 
 .contact__info {
@@ -80,4 +83,43 @@ input[type=text] {
   color: $color-light;
   @extend %transition;
   @extend %hover-additional;
+}
+
+@media (max-width: 996px) {
+  .contact__wrapper {
+    flex-direction: column;
+  }
+  .contact__title, .contact__text {
+    text-align: center;
+  }
+  .contact__text {
+    max-width: 100%;
+  }
+  .contact__info {
+    margin-right: 0;
+  }
+  .contact__details {
+    margin-bottom: 50px;
+  }
+
+  .contact__phone, .contact__mail {
+    justify-content: center;
+  }
+  .contact__form-btn {
+    margin: 20px auto 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact__form {
+    display: flex;
+    flex-direction: column;
+
+  }
+  input[type=text] {
+    margin: 0 0 16px;
+  }
+  .contact__form-textarea {
+    min-width: unset;
+  }
 }

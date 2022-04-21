@@ -2,6 +2,12 @@
   margin-top: 100px;
 }
 
+.about__title {
+  @include media-tablet {
+    text-align: center;
+  }
+}
+
 .about__descr {
   margin-top: 20px;
   @extend %text;

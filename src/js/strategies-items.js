@@ -23,5 +23,13 @@ export const strategiesItems = [
     content: 'Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?',
     date: '01.01.2020'
   },
+  {
+    id: 4,
+    title: 'Success Steps For Your Personal Or Business Life',
+    urlToImage: '../img/strategies/strategy-3.jpg',
+    tags: ['Culture', 'Design', 'Art'],
+    content: 'Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?',
+    date: '01.01.2020'
+  },
 
 ];

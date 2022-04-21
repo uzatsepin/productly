@@ -1,0 +1,40 @@
+.hamburger {
+  width: 31px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  display: none;
+  border-radius: 5px;
+  &::after, &::before {
+    border-radius: 5px;
+    content: '';
+    position: absolute;
+    width: 31px;
+    height: 3px;
+    background-color: $color-hamburger;
+    left: 0;
+  }
+  &::before {
+    top: 0;
+  }
+  &::after {
+    bottom: 0;
+  }
+  @include media-tablet {
+    display: flex;
+    position: absolute;
+    left: 20px;
+    top: 29px;
+  }
+}
+
+.hamburger span {
+  display: block;
+  border-radius: 5px;
+  height: 3px;
+  width: 100%;
+  background-color: $color-hamburger;
+}
