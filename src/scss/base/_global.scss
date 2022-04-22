@@ -2,6 +2,9 @@
   max-width: $content-width;
   margin: 0 auto;
   padding: 0 10px;
+  @include media-tablet {
+    max-width: $content-width;
+  }
 }
 
 .title {
@@ -44,8 +47,4 @@
 
 .block-shadowed {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-}
-
-.hide {
-  display: none;
 }

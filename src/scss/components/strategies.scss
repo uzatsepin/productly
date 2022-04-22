@@ -22,11 +22,12 @@
   margin-top: 30px;
   border-radius: 8px;
   @include media-tablet {
-    flex-basis: 48%;
     overflow: hidden;
   }
-  @include media-mobile {}
-  flex-basis: 100%;
+  @media (max-width: 767px) {
+    margin: 30px auto 0;
+  }
+
 }
 
 .strategy__title {
@@ -35,6 +36,9 @@
   padding: 24px 34px 29px 33px;
   @extend %transition;
   cursor: pointer;
+  @media (max-width: 768px) {
+    padding: 26px 29px 20px 28px;
+  }
   &:hover {
     color: $color-primary;
   }
@@ -48,21 +52,41 @@
 }
 
 .strategy__wrapper {
-  @include columns($width: 30%)
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 34px;
+  @media (max-width: 1000px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 30px;
+    justify-items: center;
+  }
+  @media (max-width: 767px) {
+    display: block;
+  }
 }
 
 
 .strategy-wide {
   max-width: 787px;
+  @include media-tablet {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  @media (max-width: 1000px) {
+    max-width: 377px;
+  }
+  grid-area: 2 / 1 / 3 / 3;
+}
+
+.strategy__hidden {
+  display: none;
 }
 
 @media (max-width: 1170px) {
   .strategy__wrapper {
     justify-content: space-around;
 
-  }
-  .strategy {
-    overflow: initial;
   }
 }
 

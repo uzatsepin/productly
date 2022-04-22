@@ -11,9 +11,6 @@
   @include columns($width: 50%);
   flex-wrap: nowrap;
   padding-bottom: 90px;
-  @include media-tablet {
-    text-align: center;
-  }
 }
 
 .contact__info {
@@ -111,6 +108,9 @@ input[type=text] {
 }
 
 @media (max-width: 600px) {
+  .contact__wrapper {
+    padding-bottom: 50px;
+  }
   .contact__form {
     display: flex;
     flex-direction: column;
