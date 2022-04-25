@@ -1,4 +1,4 @@
-export const strategiesItems = [
+export const data = [
   {
     id: 1,
     title: 'Increasing Prosperity With Positive Thinking',

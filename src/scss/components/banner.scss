@@ -16,6 +16,10 @@
   }
 }
 
+.banner__img {
+  overflow-x: hidden;
+}
+
 .banner__title {
   @include font(44px, 54px, 700);
   @extend %font-additional;

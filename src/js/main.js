@@ -1,44 +1,73 @@
 // import * as flsFunctions from './modules/functions.js';
 // flsFunctions.isWebp();
 
-// import {strategiesItems} from "./strategies-items.js";
-//
-// const strategyWrapper = document.querySelector('.strategy__wrapper');
-//
-// strategiesItems.forEach(elem => {
-//     const {title, urlToImage, tags} = elem;
-//     let strategyTags = '';
-//     for(let i = 0; i < tags.length; i++) {
-//         strategyTags += `<span class="tag tag--filled" >${tags[i]}</span>`
-//     }
-//     const strategy = document.createElement('article');
-//     strategy.classList.add('strategy', 'block-shadowed')
-//     strategy.innerHTML = `
-//         <img class="strategy__img" src=${urlToImage} alt="strategy-img">
-//         <h4 class="strategy__title">${title}</h4>
-//         <div class="strategy__tags">${strategyTags}</div>
-//     `
-//     strategyWrapper.appendChild(strategy);
-// });
-
+import {data} from "./data.js";
+import {Article} from "./modules/Article.js";
+import {Modal} from "./modules/Modal.js";
+import {ArticleModal} from "./modules/ArticleModal.js";
 
 window.onload = function () {
+    //Render Articles
+    if(data) {
+        renderArticlesToDom();
+    }
+    //Tags
     addTagsClickHandler();
+    addToolsClickHanlder();
 }
 
-const addTagsClickHandler = () => {
-    document.querySelector('.strategies__tags').addEventListener('click', (e) => {
-        if(e.target.classList.contains('tag')) { //проверяем нажатие на тэг
-            let clickedTag = e.target; //записываем в переменную значение
-            removeSelectedTags(); //убрали класс selected
-            selectClickedTag(clickedTag); //добавили класс selected в нажатый тэг
-            if(clickedTag.innerText === 'All') {
-                showAllStrategies();
-            } else {
-                filterStrategiesBySelected(clickedTag.innerText);
-            }
+const generateArticles = (data) => {
+    let articles = [];
+    data.forEach(article => {
+        articles.push(new Article(article))
+    });
+    return articles;
+}
+
+const getStrategiesWrapper = () => {
+    return document.querySelector('.strategy__wrapper');
+}
+
+const renderArticlesToDom = () => {
+    let strategiesWrapper = getStrategiesWrapper();
+    generateArticles(data).forEach(article => {
+        strategiesWrapper.append(article.generateArticle())
+    })
+    addStrategyClickHandler();
+}
+
+const addToolsClickHandler = () => {
+    document.querySelector('.tools__link').addEventListener('click', () => {
+        generateToolsModal();
+    })
+}
+
+const generateToolsModal = () => {
+    renderModalWindow('Test content for modal window');
+}
+
+const renderModalWindow = (content) => {
+    let modal = new Modal('tools-modal');
+    modal.buildModal(content);
+}
+
+const addStrategyClickHandler = () => {
+    document.querySelector('.strategy__wrapper').addEventListener('click', (e) => {
+        if(e.target.closest('.strategy')) {
+            let clickedStrategyId = e.target.closest('.strategy').getAttribute('data-id');
+            let clickedStrategyData = getClickedData(clickedStrategyId);
+            renderArticleModalWindow(clickedStrategyData)
         }
     })
+}
+
+const getClickedData = (id) => {
+    return data.find(article => article.id === id);
+}
+
+const renderArticleModalWindow = (article) => {
+    let modal = new ArticleModal('article-modal', article);
+    modal.renderModal();
 }
 
 const showAllStrategies = () => {
