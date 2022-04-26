@@ -159,7 +159,8 @@ h5 {
   color: #ffffff;
 }
 
-.tag--filled {
+.tag--colored,
+.tag_colored {
   margin-right: 7px;
   padding: 3px 15px;
   background-color: #F5F5F5;
@@ -173,7 +174,7 @@ h5 {
 
 .footer-link,
 .contact__form-btn,
-.strategy__title,
+.strategy__name,
 .tools__link,
 .banner__link,
 .banner__btn,
@@ -438,7 +439,7 @@ h1 {
   border-radius: 8px;
 }
 
-.strategy__title {
+.strategy__name {
   font-size: 24px;
   line-height: 34px;
   font-weight: 700;
@@ -448,7 +449,7 @@ h1 {
   cursor: pointer;
 }
 
-.strategy__title:hover {
+.strategy__name:hover {
   color: #FF9900;
 }
 
@@ -459,7 +460,6 @@ h1 {
 .strategy__wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 34px;
 }
 
@@ -481,6 +481,7 @@ h1 {
 }
 
 .about__employees {
+  overflow: unset;
   margin-top: 45px;
   display: flex;
   flex-wrap: wrap;
@@ -686,12 +687,13 @@ input[type=text] {
 
 .modal {
   position: relative;
-  border-radius: 10px;
+  border-radius: 13px;
   background-color: #ffffff;
   width: 675px;
   min-height: 120px;
   max-height: 90%;
   overflow: auto;
+  box-shadow: 0px 15px 32px rgba(0, 0, 0, 0.15);
 }
 
 .modal__close-icon {
@@ -703,6 +705,66 @@ input[type=text] {
 
 .modal__close-icon svg {
   pointer-events: none;
+}
+
+.strategy__date {
+  font-size: 13px;
+  line-height: 26px;
+  font-weight: 400;
+  font-style: normal;
+  color: #2F281E;
+}
+
+.modal__title {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 700;
+  font-style: normal;
+  color: #2F281E;
+  margin-top: 5px;
+}
+
+.modal__text {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  font-style: normal;
+  color: #2F281E;
+  margin-bottom: 12px;
+}
+
+.article-modal__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  border-radius: 12px;
+}
+
+.article-modal__content .strategy__image {
+  width: 675px;
+}
+
+.article-modal__content .strategy__content {
+  padding: 25px 34px 41px 41px;
+}
+
+.article-modal__content .strategy__name {
+  padding: 0;
+}
+
+.article-modal__content .strategy__text {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  font-style: normal;
+  color: #2F281E;
+  margin-bottom: 12px;
+}
+
+.article-modal__content .strategy__tags {
+  padding: 0;
 }
 
 .hamburger {
@@ -950,6 +1012,10 @@ input[type=text] {
 }
 
 @media (max-width: 1080px) {
+  .about__employee {
+    margin: 0 auto;
+  }
+
   .about__employees {
     display: block;
   }
@@ -1005,7 +1071,7 @@ input[type=text] {
 }
 
 @media (max-width: 768px) {
-  .strategy__title {
+  .strategy__name {
     padding: 26px 29px 20px 28px;
   }
 }

@@ -4,6 +4,7 @@
 <meta name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -46,19 +47,7 @@
 </header>
 
 
-        <div class="modal">
-    <img class="modal__close" src="../img/modal/close-ico.svg" alt="modal close">
-    <img class="modal__img" src="../img/modal/modal-img.jpg" alt="modal img">
 
-    <div class="modal__content">
-        <p class="modal__date">12/12/2020</p>
-        <h3 class="modal__title title">Motivation Is The First Step To Success</h3>
-        <p class="modal__text">
-            Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?
-        </p>
-        <span class="tag tag--bordered">Culture</span>
-    </div>
-</div>
         <section class="banner">
     <div class="container">
         <div class="banner__inner">
@@ -199,8 +188,8 @@
         <p class="about__descr">
             Your About Us page is vital. It’s often the first stop in any user’s journey through a website or blog. It also shouldn’t be their last, because first impressions count online just as much as they do in the real world. If your visitors aren’t impressed, you can expect them to leave without reading your awesome content or completing a conversion action (e.g., signing up for your newsletter, making a purchase).
         </p>
-        <div class="about__employees">
-            <div class="about__employee">
+        <div class="swiper about__employees">
+            <div class="swiper-slide about__employee">
                 <div class="about__info">
                     <h6 class="about__name">Kathy Rosenberg</h6>
                     <p class="about__position">Product Manager</p>
@@ -208,7 +197,7 @@
                 </div>
                 <img class="about__img" src="../img/employees/employees-1.jpg" alt="employees photo">
             </div>
-            <div class="about__employee">
+            <div class="swiper-slide about__employee">
                 <div class="about__info">
                     <h6 class="about__name">Alexandra Boyarskaya</h6>
                     <p class="about__position">Support Marketing Specialist</p>
@@ -216,7 +205,7 @@
                 </div>
                 <img class="about__img" src="../img/employees/employees-2.jpg" alt="employees photo">
             </div>
-            <div class="about__employee">
+            <div class="swiper-slide about__employee">
                 <div class="about__info">
                     <h6 class="about__name">Kathy Rosenberg</h6>
                     <p class="about__position">Photographer</p>
@@ -224,6 +213,7 @@
                 </div>
                 <img class="about__img" src="../img/employees/employees-3.jpg" alt="employees photo">
             </div>
+            <div class="swiper-pagination"></div>
         </div>
     </div>
 </section>

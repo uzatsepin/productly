@@ -30,7 +30,7 @@
 
 }
 
-.strategy__title {
+.strategy__name {
   @include font(24px, 34px, 700);
   color: $color-heading;
   padding: 24px 34px 29px 33px;
@@ -54,7 +54,7 @@
 .strategy__wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  //grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 34px;
   @media (max-width: 1000px) {
     grid-template-columns: repeat(2, 1fr);

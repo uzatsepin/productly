@@ -17,12 +17,10 @@
 }
 
 .about__employees {
+  overflow: unset;
   margin-top: 45px;
   @include columns($width: 30%);
   justify-content: space-around;
-  @media (max-width: 1080px) {
-    display: block;
-  }
 }
 
 .about__employee {
@@ -60,5 +58,14 @@
   right: -5%;
   @media (max-width: 375px) {
     right: 0;
+  }
+}
+
+@media (max-width: 1080px) {
+  .about__employees {
+    display: block;
+  }
+  .about__employee {
+    margin: 0 auto;
   }
 }
