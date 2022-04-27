@@ -17,10 +17,7 @@
 }
 
 .about__employees {
-  overflow: unset;
   margin-top: 45px;
-  @include columns($width: 30%);
-  justify-content: space-around;
 }
 
 .about__employee {
@@ -28,9 +25,6 @@
   max-width: 345px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
-  @media (max-width: 1080px) {
-    margin: 0 auto;
-  }
 }
 
 .about__info {
@@ -57,15 +51,28 @@
   top: 19%;
   right: -5%;
   @media (max-width: 375px) {
-    right: 0;
+    right: -5%;
   }
 }
 
-@media (max-width: 1080px) {
-  .about__employees {
-    display: block;
-  }
-  .about__employee {
-    margin: 0 auto;
+.about__dots {
+  display: none;
+  gap: 6px;
+  margin-top: 33px;
+  justify-content: center;
+  @media (max-width: 1032px) {
+    display: flex;
   }
 }
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border: 1px solid $color-heading;
+  border-radius: 50%;
+}
+
+.dot--active {
+  background-color: $color-heading;
+}
+

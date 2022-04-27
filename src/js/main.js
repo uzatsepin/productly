@@ -3,17 +3,37 @@ import {ArticleModal} from "./modules/ArticleModal.js";
 import {Modal} from "./modules/Modal.js";
 import {data} from "./data.js";
 
-import Swiper from 'swiper';
-
+import Swiper, {Pagination} from 'swiper';
 const swiper = new Swiper('.swiper', {
-    // Optional parameters
+    modules: [Pagination],
+    centeredSlides: true,
+    spaceBetween: 60,
+    centeredSlidesBounds: true,
     direction: 'horizontal',
-    loop: true,
-
-    // If we need pagination
+    loop: false,
     pagination: {
-        el: '.swiper-pagination',
+        el: '.about__dots',
+        type: 'bullets',
+        bulletClass: 'dot',
+        bulletActiveClass: 'dot--active',
+        bulletElement: 'div',
         clickable: true,
+    },
+    breakpoints: {
+        1366: {
+            enabled: false,
+            slidesPerView: 2,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+        600: {
+            slidesPerView: 1.5,
+        },
+        375: {
+            slidesPerView: 1,
+            enabled: true,
+        }
     },
 });
 
