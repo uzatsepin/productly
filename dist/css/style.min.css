@@ -121,6 +121,10 @@ h5 {
   font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   max-width: 1197px;
   margin: 0 auto;
