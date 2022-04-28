@@ -9,22 +9,28 @@
                 @@include('hamburger.html',)
                 <ul class="menu__list">
                     <li class="menu__list-item">
-                        <a class="menu__list-link" href="#">Home</a>
+                        <a class="menu__list-link" href="#" data-lng="home">Home</a>
                     </li>
                     <li class="menu__list-item">
-                        <a class="menu__list-link" href="#tools">Services</a>
+                        <a class="menu__list-link" href="#tools" data-lng="services">Services</a>
                     </li>
                     <li class="menu__list-item">
-                        <a class="menu__list-link" href="#about">About</a>
+                        <a class="menu__list-link" href="#about" data-lng="about">About</a>
                     </li>
                     <li class="menu__list-item">
-                        <a class="menu__list-link" href="#product">Product</a>
+                        <a class="menu__list-link" href="#product" data-lng="product">Product</a>
                     </li>
                 </ul>
             </nav>
             <div class="user-nav">
-                <a class="user-nav__link" href="#">Sign In</a>
-                <a class="user-nav__link" href="#">Sign Up</a>
+                <a class="user-nav__link" href="#" data-lng="sign-in">Sign In</a>
+                <a class="user-nav__link" href="#" data-lng="sign-up">Sign Up</a>
+            </div>
+            <div class="header--lang">
+              <select class="change-lang" id="change-lang">
+                <option value="ua">🇺🇦</option>
+                <option value="en">🇬🇧&emsp;</option>
+              </select>
             </div>
         </div>
     </div>

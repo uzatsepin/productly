@@ -25,22 +25,28 @@
 </div>
                 <ul class="menu__list">
                     <li class="menu__list-item">
-                        <a class="menu__list-link" href="#">Home</a>
+                        <a class="menu__list-link" href="#" data-lng="home">Home</a>
                     </li>
                     <li class="menu__list-item">
-                        <a class="menu__list-link" href="#tools">Services</a>
+                        <a class="menu__list-link" href="#tools" data-lng="services">Services</a>
                     </li>
                     <li class="menu__list-item">
-                        <a class="menu__list-link" href="#about">About</a>
+                        <a class="menu__list-link" href="#about" data-lng="about">About</a>
                     </li>
                     <li class="menu__list-item">
-                        <a class="menu__list-link" href="#product">Product</a>
+                        <a class="menu__list-link" href="#product" data-lng="product">Product</a>
                     </li>
                 </ul>
             </nav>
             <div class="user-nav">
-                <a class="user-nav__link" href="#">Sign In</a>
-                <a class="user-nav__link" href="#">Sign Up</a>
+                <a class="user-nav__link" href="#" data-lng="sign-in">Sign In</a>
+                <a class="user-nav__link" href="#" data-lng="sign-up">Sign Up</a>
+            </div>
+            <div class="header--lang">
+              <select class="change-lang" id="change-lang">
+                <option value="ua">🇺🇦</option>
+                <option value="en">🇬🇧&emsp;</option>
+              </select>
             </div>
         </div>
     </div>
@@ -52,14 +58,14 @@
     <div class="container">
         <div class="banner__inner">
             <div class="banner__info">
-                <h1 class="banner__title title">
+                <h1 class="banner__title title" data-lng="banner-title">
                     The Design Thinking superpowers
                 </h1>
-                <p class="banner__text">
+                <p class="banner__text" data-lng="banner-text">
                     Tools, tutorials, design and innovation experts, all in one place! The most intuitive way to imagine your next user experience.
                 </p>
-                <button class="banner__btn ">Get started</button>
-                <a href="#" class="banner__link">Watch the Video</a>
+                <button class="banner__btn" data-lng="get-started">Get started</button>
+                <a href="#" class="banner__link" data-lng="watch-video">Watch the Video</a>
             </div>
             <div class="banner__img">
                 <img class="" src="../img/backgrounds/top-bg.svg" alt="banner img">
@@ -68,64 +74,64 @@
     </div>
 </section>
         <section class="tools" id="tools">
-    <h3 class="tools__title title">We design tools to unveil your superpowers</h3>
+    <h3 class="tools__title title" data-lng="tools-title">We design tools to unveil your superpowers</h3>
         <div class="tools__inner">
          <div class="container">
              <div class="tools__items">
                 <div class="tools__item">
                     <img class="tools__item-img" src="../img/tools-icons/tools-1.svg" alt="tools img">
-                    <h6 class="tools__item-title">First click tests</h6>
-                    <p class="tools__item-text">While most people enjoy casino gambling</p>
+                    <h6 class="tools__item-title" data-lng="first-click">First click tests</h6>
+                    <p class="tools__item-text" data-lng="first-click-text">While most people enjoy casino gambling</p>
                 </div>
                 <div class="tools__item">
                     <img class="tools__item-img" src="../img/tools-icons/tools-2.svg" alt="tools img">
-                    <h6 class="tools__item-title">Design surveys</h6>
-                    <p class="tools__item-text">Sports betting, lottery and bingo playing for the fun</p>
+                    <h6 class="tools__item-title" data-lng="design">Design surveys</h6>
+                    <p class="tools__item-text" data-lng="design-text">Sports betting, lottery and bingo playing for the fun</p>
                 </div>
                 <div class="tools__item">
                     <img class="tools__item-img" src="../img/tools-icons/tools-3.svg" alt="tools img">
-                    <h6 class="tools__item-title">Preference tests</h6>
-                    <p class="tools__item-text">The Myspace page defines
+                    <h6 class="tools__item-title" data-lng="tests">Preference tests</h6>
+                    <p class="tools__item-text" data-lng="tests-text">The Myspace page defines
                         the individual.</p>
                 </div>
                 <div class="tools__item">
                     <img class="tools__item-img" src="../img/tools-icons/tools-4.svg" alt="tools img">
-                    <h6 class="tools__item-title">Five second tests</h6>
-                    <p class="tools__item-text">Personal choices and the overall personality of the person. </p>
+                    <h6 class="tools__item-title" data-lng="five">Five second tests</h6>
+                    <p class="tools__item-text" data-lng="five-text">Personal choices and the overall personality of the person. </p>
                 </div>
              </div>
         </div>
-        <a class="tools__link" href="#">Sign Up now</a>
+        <a class="tools__link" href="#" data-lng="tools-link">Sign Up now</a>
     </div>
 </section>
         <section class="strategies" id="product">
     <div class="container">
-        <h3 class="strategies__title title">
+        <h3 class="strategies__title title" data-lng="strategy-title">
             Marketing Strategies
         </h3>
-        <p class="strategies__descr">
+        <p class="strategies__descr" data-lng="strategy-title">
             Join 40,000+ other marketers and get proven strategies on email marketing
         </p>
         <div class="strategies__tags tags">
-            <span class="tag tag--selected">All</span>
-            <span class="tag tag--bordered">Art</span>
-            <span class="tag tag--bordered">Culture</span>
-            <span class="tag tag--bordered">Design</span>
+            <span class="tag tag--selected" data-lng="All">All</span>
+            <span class="tag tag--bordered" data-lng="Art">Art</span>
+            <span class="tag tag--bordered" data-lng="Culture">Culture</span>
+            <span class="tag tag--bordered" data-lng="Design">Design</span>
         </div>
         <div class="strategy__wrapper">
             <article class="strategy block-shadowed">
                 <img class="strategy__img" src="../img/strategies/strategy-1.jpg" alt="strategy-img">
                 <h4 class="strategy__title">Increasing Prosperity With Positive Thinking</h4>
                 <div class="strategy__tags">
-                    <span class="tag tag--filled">Art</span>
-                    <span class="tag tag--filled">Design</span>
+                    <span class="tag tag--filled" data-lng="Art">Art</span>
+                    <span class="tag tag--filled" data-lng="Design">Design</span>
                 </div>
             </article>
             <article class="strategy block-shadowed">
                 <img class="strategy__img" src="../img/strategies/strategy-2.jpg" alt="strategy-img">
                 <h4 class="strategy__title">Motivation Is The First Step To Success</h4>
                 <div class="strategy__tags">
-                    <span class="tag tag--filled">Culture</span>
+                    <span class="tag tag--filled" data-lng="Culture">Culture</span>
                 </div>
             </article>
             <article class="strategy block-shadowed">
@@ -134,7 +140,7 @@
                 <div class="strategy__tags">
                     <span class="tag tag--filled">Culture</span>
                     <span class="tag tag--filled">Design</span>
-                    <span class="tag tag--filled">Art</span>
+                    <span class="tag tag--filled" data-lng="Art">Art</span>
                 </div>
             </article>
             <article class="strategy strategy-wide block-shadowed">
@@ -152,14 +158,14 @@
                 <div class="strategy__tags">
                     <span class="tag tag--filled">Culture</span>
                     <span class="tag tag--filled">Design</span>
-                    <span class="tag tag--filled">Art</span>
+                    <span class="tag tag--filled" data-lng="Art">Art</span>
                 </div>
             </article>
             <article class="strategy block-shadowed">
                 <img class="strategy__img" src="../img/strategies/strategy-1.jpg" alt="strategy-img">
                 <h4 class="strategy__title">Increasing Prosperity With Positive Thinking</h4>
                 <div class="strategy__tags">
-                    <span class="tag tag--filled">Art</span>
+                    <span class="tag tag--filled" data-lng="Art">Art</span>
                     <span class="tag tag--filled">Design</span>
                 </div>
             </article>
@@ -176,7 +182,7 @@
                 <div class="strategy__tags">
                     <span class="tag tag--filled">Culture</span>
                     <span class="tag tag--filled">Design</span>
-                    <span class="tag tag--filled">Art</span>
+                    <span class="tag tag--filled" data-lng="Art">Art</span>
                 </div>
             </article>
         </div>
@@ -184,32 +190,32 @@
 </section>
         <section class="about" id="about">
     <div class="container">
-        <h2 class="about__title title">About Us</h2>
-        <p class="about__descr">
+        <h2 class="about__title title" data-lng="About-Us-Title">About Us</h2>
+        <p class="about__descr" data-lng="About-Us-Text">
             Your About Us page is vital. It’s often the first stop in any user’s journey through a website or blog. It also shouldn’t be their last, because first impressions count online just as much as they do in the real world. If your visitors aren’t impressed, you can expect them to leave without reading your awesome content or completing a conversion action (e.g., signing up for your newsletter, making a purchase).
         </p>
         <div class="swiper about__employees">
             <div class="swiper-wrapper">
                 <div class="about__employee swiper-slide ">
                     <div class="about__info">
-                        <h6 class="about__name">Kathy Rosenberg</h6>
-                        <p class="about__position">Product Manager</p>
+                        <h6 class="about__name" data-lng="About-Us-name-1">Kathy Rosenberg</h6>
+                        <p class="about__position" data-lng="About-Us-position-1">Product Manager</p>
                         <a class="about__mail" href="mailto:kathyr@gmail.com">kathyr@gmail.com</a>
                     </div>
                     <img class="about__img" src="../img/employees/employees-1.jpg" alt="employees photo">
                 </div>
                 <div class="about__employee swiper-slide ">
                     <div class="about__info">
-                        <h6 class="about__name">Alexandra Boyarskaya</h6>
-                        <p class="about__position">Support Marketing Specialist</p>
+                        <h6 class="about__name" data-lng="About-Us-name-2">Alexandra Boyarskaya</h6>
+                        <p class="about__position" data-lng="About-Us-position-2">Support Marketing Specialist</p>
                         <a class="about__mail" href="mailto:alexandrab@gmail.com">alexandrab@gmail.com</a>
                     </div>
                     <img class="about__img" src="../img/employees/employees-2.jpg" alt="employees photo">
                 </div>
                 <div class=" about__employee swiper-slide">
                     <div class="about__info">
-                        <h6 class="about__name">Kathy Rosenberg</h6>
-                        <p class="about__position">Photographer</p>
+                        <h6 class="about__name" data-lng="About-Us-name-3">Kathy Rosenberg</h6>
+                        <p class="about__position" data-lng="About-Us-position-3">Photographer</p>
                         <a class="about__mail" href="mailto:kathyr@gmail.com">kathyr@gmail.com</a>
                     </div>
                     <img class="about__img" src="../img/employees/employees-3.jpg" alt="employees photo">
@@ -221,10 +227,10 @@
 </section>
         <section class="contact">
     <div class="container">
-        <h2 class="contact__title title">Contact Us</h2>
+        <h2 class="contact__title title" data-lng="Contact-Us-title">Contact Us</h2>
         <div class="contact__wrapper">
             <div class="contact__info">
-                <p class="contact__text">Your About Us page is vital. It’s often the first stop in any user’s journey through a website or blog. It also shouldn’t be their last, because first impressions count online just as much as they do in the real world. If your visitors aren’t impressed, you can expect them to leave without reading your awesome content or completing a conversion action (e.g., signing up for your newsletter, making a purchase).</p>
+                <p class="contact__text" data-lng="Contact-Us-text">Your About Us page is vital. It’s often the first stop in any user’s journey through a website or blog. It also shouldn’t be their last, because first impressions count online just as much as they do in the real world. If your visitors aren’t impressed, you can expect them to leave without reading your awesome content or completing a conversion action (e.g., signing up for your newsletter, making a purchase).</p>
                 <div class="contact__details">
                     <div class="contact__phone">
                         <img class="contact__img" src="../img/icons/ico_phone.svg" alt="">
@@ -238,10 +244,10 @@
             </div>
             <div class="contact__form-wrapper">
                 <form action="#" class="contact__form">
-                    <input class="contact__form-name" placeholder="Your name" type="text">
-                    <input class="contact__form-email" placeholder="Your email" type="email">
+                    <input class="contact__form-name" placeholder="Your name" type="text" required title="" data-lng="input-name">
+                    <input class="contact__form-email" placeholder="Your email" type="email" required data-lng="input-mail">
                     <textarea class="contact__form-textarea" placeholder="What do you want to ask?"></textarea>
-                    <button class="contact__form-btn" type="submit">Send</button>
+                    <button class="contact__form-btn" type="submit" data-lng="input-send">Send</button>
                 </form>
             </div>
         </div>
@@ -255,53 +261,53 @@
             </a>
 
             <nav class="quick-menu">
-                <h6 class="footer-menu__title">Quick Links</h6>
+                <h6 class="footer-menu__title" data-lng="Quick-Links">Quick Links</h6>
                 <ul class="quick-menu__items">
                     <li>
-                        <a class="quick-menu__link footer-link" href="#">About Us</a>
+                        <a class="quick-menu__link footer-link" href="#" data-lng="About-Us-Title">About Us</a>
                     </li>
                     <li>
-                        <a class="quick-menu__link footer-link" href="#">Blog</a>
+                        <a class="quick-menu__link footer-link" href="#" data-lng="Blog">Blog</a>
                     </li>
                     <li>
-                        <a class="quick-menu__link footer-link" href="#">Contact</a>
+                        <a class="quick-menu__link footer-link" href="#" data-lng="Contact">Contact</a>
                     </li>
                     <li>
-                        <a class="quick-menu__link footer-link" href="#">FAQ</a>
+                        <a class="quick-menu__link footer-link" href="#" data-lng="FAQ">FAQ</a>
                     </li>
                 </ul>
             </nav>
             <nav class="legal-menu">
-                <h6 class="footer-menu__title">Legal Stuff</h6>
+                <h6 class="footer-menu__title" data-lng="Legal Stuff">Legal Stuff</h6>
                 <ul class="legal-menu__items">
                     <li>
-                        <a class="legal-menu__link footer-link" href="#">Disclaimer</a>
+                        <a class="legal-menu__link footer-link" href="#" data-lng="Disclaimer">Disclaimer</a>
                     </li>
                     <li>
-                        <a class="legal-menu__link footer-link" href="#">Financing</a>
+                        <a class="legal-menu__link footer-link" href="#" data-lng="Financing">Financing</a>
                     </li>
                     <li>
-                        <a class="legal-menu__link footer-link" href="#">Privacy Policy</a>
+                        <a class="legal-menu__link footer-link" href="#" data-lng="Privacy Policy">Privacy Policy</a>
                     </li>
                     <li>
-                        <a class="legal-menu__link footer-link" href="#">Terms of Service</a>
+                        <a class="legal-menu__link footer-link" href="#" data-lng="Terms of Service">Terms of Service</a>
                     </li>
                 </ul>
             </nav>
             <nav class="quick-menu">
-                <h6 class="footer-menu__title">Quick Links</h6>
+                <h6 class="footer-menu__title" data-lng="Quick-Links">Quick Links</h6>
                 <ul class="quick-menu__items">
                     <li>
-                        <a class="quick-menu__link footer-link" href="#">About Us</a>
+                        <a class="quick-menu__link footer-link" href="#" data-lng="About-Us-Title">About Us</a>
                     </li>
                     <li>
-                        <a class="quick-menu__link footer-link" href="#">Blog</a>
+                        <a class="quick-menu__link footer-link" href="#" data-lng="Blog">Blog</a>
                     </li>
                     <li>
-                        <a class="quick-menu__link footer-link" href="#">Contact</a>
+                        <a class="quick-menu__link footer-link" href="#" data-lng="Contact">Contact</a>
                     </li>
                     <li>
-                        <a class="quick-menu__link footer-link" href="#">FAQ</a>
+                        <a class="quick-menu__link footer-link" href="#" data-lng="FAQ">FAQ</a>
                     </li>
                 </ul>
             </nav>

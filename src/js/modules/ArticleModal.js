@@ -37,7 +37,7 @@ export class ArticleModal extends Modal {
             if(this.tags) {
                 template += `<div class="strategy__tags tags">`
                 this.tags.map(tag => {
-                    template += `<span class="tag tag_colored">${tag}</span>`
+                    template += `<span class="tag tag_colored" data-lng="${tag}">${tag}</span>`
                 })
                 template += `</div>`
             }

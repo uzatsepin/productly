@@ -1,9 +1,14 @@
 import {Article} from "./modules/Article.js";
 import {ArticleModal} from "./modules/ArticleModal.js";
 import {Modal} from "./modules/Modal.js";
-import {data} from "./data.js";
+import {data, dataUa} from "./data.js";
+
+import {langArr, i18Obj} from "./languages.js";
+
+import tippy from 'tippy.js';
 
 import Swiper, {Pagination} from 'swiper';
+
 const swiper = new Swiper('.swiper', {
     modules: [Pagination],
     centeredSlides: true,
@@ -37,11 +42,42 @@ const swiper = new Swiper('.swiper', {
     },
 });
 
+tippy('.contact__form-name', {
+  content: "Enter Your Name",
+  trigger: 'focus',
+  duration: 500,
+  animation: 'fade',
+});
+tippy('.contact__form-email', {
+  content: "Enter Your Email",
+  trigger: 'focus',
+  duration: 500,
+  animation: 'fade',
+});
+tippy('.contact__form-textarea', {
+  content: "Please, enter your question",
+  trigger: 'focus',
+  duration: 500,
+  animation: 'fade',
+});
+
+const select = document.querySelector('select');
+
+function dataSelect() {
+  if(select.value === 'ua') {
+    return dataUa;
+  } else {
+    return data;
+  }
+}
+
+dataSelect()
+
 // Пишем используя single responsibility principle js
 
 window.onload = function () {
     // Render Articles
-    if(data) {
+    if(dataSelect()) {
         renderArticlesToDom();
     }
     //Tags
@@ -99,7 +135,7 @@ const filterStrategiesBySelectedTag = (selectedTag) => {
 
 const renderArticlesToDom = () => {
     let strategiesWrapper = getStrategiesWrapper();
-    generateArticles(data).forEach(article => {
+    generateArticles(dataSelect()).forEach(article => {
         strategiesWrapper.append(article.generateArticle())
     })
 
@@ -149,10 +185,60 @@ const addStrategyClickHandler = () => {
 }
 
 const getClickedData = (id) => {
-    return data.find(article => article.id == id)
+    return dataSelect().find(article => article.id == id)
 }
 
 const renderArticleModalWindow = (article) => {
     let modal =  new ArticleModal ('article-modal', article);
     modal.renderModal();
 }
+
+
+select.addEventListener('change', changeUrlLanguage);
+const allLang = ['en', 'ua']
+
+function changeUrlLanguage() {
+  let lang = select.value;
+  location.href = window.location.pathname + '#' + lang;
+  location.reload();
+}
+
+function changeLanguage() {
+  let hash = window.location.hash;
+  hash = hash.substring(1);
+  if(!allLang.includes(hash)) {
+    location.href = window.location.pathname + '#ua';
+    location.reload();
+  }
+  select.value = hash;
+  document.querySelector('title').innerHTML = langArr['title'][hash];
+  for(let key in langArr) {
+    document.querySelectorAll('.menu__list-link').innerHTML = langArr[key][hash];
+  }
+}
+changeLanguage()
+
+function getTranslate() {
+  let elemsForTranslate = [...document.querySelectorAll('[data-lng]')];
+  let lang = select.value;
+  let formTranslate = document.querySelectorAll('input');
+  let textarea = document.querySelector('.contact__form-textarea');
+
+  if(lang === 'ua') {
+    textarea.placeholder = i18Obj['ua']['input-ask'];
+  } else if (lang === 'en') {
+    textarea.placeholder = i18Obj['en']['input-ask'];
+  }
+
+      elemsForTranslate.forEach((el) => {
+        el.textContent = i18Obj[lang][el.dataset.lng]
+      });
+
+      formTranslate.forEach((el) => {
+        el.placeholder = i18Obj[lang][el.dataset.lng];
+      })
+
+  }
+
+getTranslate();
+
