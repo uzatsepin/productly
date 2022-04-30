@@ -40,6 +40,7 @@ const swiper = new Swiper('.swiper', {
     },
 });
 
+
 const select = document.querySelector('select');
 
 function dataSelect() {
@@ -179,14 +180,15 @@ select.addEventListener('change', () => {
 
 function checkStorage() {
 	if (select.value === 'ua') {
-		select.value = localStorage.getItem('lang', 'ua');
+		window.location.href = `#${localStorage.getItem('lang', 'ua')}`;
 	} else {
-		select.value = localStorage.getItem('lang', 'en');
+		window.location.href = `#${localStorage.getItem('lang', 'en')}`;
 	}
 }
 
 checkStorage();
 
+console.log(window.location.href);
 
 const allLang = ['en', 'ua']
 
