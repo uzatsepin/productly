@@ -5,8 +5,6 @@ import {data, dataUa} from "./data.js";
 
 import {langArr, i18Obj} from "./languages.js";
 
-import tippy from 'tippy.js';
-
 import Swiper, {Pagination} from 'swiper';
 
 const swiper = new Swiper('.swiper', {
@@ -40,25 +38,6 @@ const swiper = new Swiper('.swiper', {
             enabled: true,
         }
     },
-});
-
-tippy('.contact__form-name', {
-  content: "Enter Your Name",
-  trigger: 'focus',
-  duration: 500,
-  animation: 'fade',
-});
-tippy('.contact__form-email', {
-  content: "Enter Your Email",
-  trigger: 'focus',
-  duration: 500,
-  animation: 'fade',
-});
-tippy('.contact__form-textarea', {
-  content: "Please, enter your question",
-  trigger: 'focus',
-  duration: 500,
-  animation: 'fade',
 });
 
 const select = document.querySelector('select');

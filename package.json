@@ -21,8 +21,7 @@
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-newer": "^1.4.0",
     "gulp-webpcss": "^1.1.1",
-    "swiper": "^8.1.4",
-    "tippy.js": "^6.3.7"
+    "swiper": "^8.1.4"
   },
   "devDependencies": {
     "browser-sync": "^2.27.9",
