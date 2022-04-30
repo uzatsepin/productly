@@ -181,14 +181,16 @@ select.addEventListener('change', () => {
 function checkStorage() {
 	if (select.value === 'ua') {
 		window.location.href = `#${localStorage.getItem('lang', 'ua')}`;
-	} else {
+	} else if (select.value === 'en') {
 		window.location.href = `#${localStorage.getItem('lang', 'en')}`;
+	} 
+	if(localStorage.length === 0) {
+		window.location.href = '#ua'
 	}
 }
 
+console.log(localStorage.length);
 checkStorage();
-
-console.log(window.location.href);
 
 const allLang = ['en', 'ua']
 
