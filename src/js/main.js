@@ -193,8 +193,22 @@ const renderArticleModalWindow = (article) => {
     modal.renderModal();
 }
 
+select.addEventListener('change', () => {
+	changeUrlLanguage();
+	localStorage.setItem('lang', select.value)
+});
 
-select.addEventListener('change', changeUrlLanguage);
+function checkStorage() {
+	if (select.value === 'ua') {
+		select.value = localStorage.getItem('lang', 'ua');
+	} else {
+		select.value = localStorage.getItem('lang', 'en');
+	}
+}
+
+checkStorage();
+
+
 const allLang = ['en', 'ua']
 
 function changeUrlLanguage() {
@@ -204,39 +218,39 @@ function changeUrlLanguage() {
 }
 
 function changeLanguage() {
-  let hash = window.location.hash;
-  hash = hash.substring(1);
-  if(!allLang.includes(hash)) {
-    location.href = window.location.pathname + '#ua';
-    location.reload();
-  }
-  select.value = hash;
-  document.querySelector('title').innerHTML = langArr['title'][hash];
-  for(let key in langArr) {
-    document.querySelectorAll('.menu__list-link').innerHTML = langArr[key][hash];
-  }
+	let hash = window.location.hash;
+	hash = hash.substring(1);
+	if(!allLang.includes(hash)) {
+		location.href = window.location.pathname + '#ua';
+		location.reload();
+	}
+	select.value = hash;
+	document.querySelector('title').innerHTML = langArr['title'][hash];
+	for(let key in langArr) {
+		document.querySelectorAll('.menu__list-link').innerHTML = langArr[key][hash];
+	}
 }
 changeLanguage()
 
 function getTranslate() {
-  let elemsForTranslate = [...document.querySelectorAll('[data-lng]')];
-  let lang = select.value;
-  let formTranslate = document.querySelectorAll('input');
-  let textarea = document.querySelector('.contact__form-textarea');
+	let elemsForTranslate = [...document.querySelectorAll('[data-lng]')];
+	let lang = select.value;
+	let formTranslate = document.querySelectorAll('input');
+	let textarea = document.querySelector('.contact__form-textarea');
 
-  if(lang === 'ua') {
-    textarea.placeholder = i18Obj['ua']['input-ask'];
-  } else if (lang === 'en') {
-    textarea.placeholder = i18Obj['en']['input-ask'];
-  }
+	if(lang === 'ua') {
+		textarea.placeholder = i18Obj['ua']['input-ask'];
+	} else if (lang === 'en') {
+		textarea.placeholder = i18Obj['en']['input-ask'];
+	}
 
-      elemsForTranslate.forEach((el) => {
-        el.textContent = i18Obj[lang][el.dataset.lng]
-      });
+			elemsForTranslate.forEach((el) => {
+			el.textContent = i18Obj[lang][el.dataset.lng]
+			});
 
-      formTranslate.forEach((el) => {
-        el.placeholder = i18Obj[lang][el.dataset.lng];
-      })
+			formTranslate.forEach((el) => {
+				el.placeholder = i18Obj[lang][el.dataset.lng];
+			})
 
   }
 
